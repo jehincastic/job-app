@@ -18,18 +18,18 @@
                <img src="img/tw.png">
               <img src="img/gp.png">
             </div>
-                <form id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>   
-                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <form id="login" class="input-group" action="/api/register" method="POST">
+                    <input name="username" type="text" class="input-field" placeholder="User Name" required>
+                    <input name="password" type="password" class="input-field" placeholder="Enter Password" required>   
+                    <input type="checkbox" class="check-box" required><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
                 
                 </form>
-                <form id="register" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Name" required>
-                    <input type="email" class="input-field" placeholder="Email Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>   
-                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <form id="register" class="input-group" action="/api/register" method="POST">
+                    <input name="username" type="text" class="input-field" placeholder="User Name" required>
+                    <input name="email" type="email" class="input-field" placeholder="Email Id" required>
+                    <input name="password" type="password" class="input-field" placeholder="Enter Password" required>   
+                    <input type="checkbox" class="check-box" required><span>I agree to the terms & conditions</span>
                     <button type="submit" class="submit-btn">Register</button>
                 </form>
             </div>
