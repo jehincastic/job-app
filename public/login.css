@@ -24,7 +24,7 @@
     width: 220px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
+    box-shadow: 0 0 20px 9px #0082e61f;
     border-radius: 30px;
 }
 .toggle-btn{
@@ -33,7 +33,8 @@
     background: transparent;
     border: 0;
     outline: none;
-    position: relative;  
+    position: relative;
+    color: #2c3e50;
 }
 #btn{
     top: 0;
@@ -41,7 +42,7 @@
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: #0082e6;
     border-radius: 30px;
     transition: .5s;
 }
@@ -55,6 +56,7 @@
     box-shadow: 0 0 20px 0 #7f7f7f3d;
     cursor: pointer;
     border-radius: 50%;
+    background: #0082e6;
 }
 .input-group{
     top: 180px;
@@ -79,10 +81,11 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: #0082e6;
     border: 0;
     outline: none;
     border-radius: 30px;
+    color: #fff;
     
 }
 .check-box{

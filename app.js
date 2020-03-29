@@ -4,6 +4,7 @@ const express = require("express"),
     app = express();
 
 const indexRoutes = require('./routes/index'),
+	templateRoutes = require('./routes/template'),
 	{ scheduler } = require("./schedulers/scheduler"),
 	{ authFunction } = require("./controllers/middlewares");
 
@@ -12,22 +13,12 @@ require("dotenv").config();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
-  
-app.get('*', function(req, res, next) {
-	if (!req.path.includes('api')) {
-		res.sendFile(path.join(__dirname, 'view/index.html'), err => {
-			if (err) {
-				res.status(500).send(err);
-			}
-		});
-	} else {
-		next();
-	}
-});
 
 app.use(authFunction);
-app.use('/api', indexRoutes);
+app.use(indexRoutes);
+app.use('/template', templateRoutes);
 app.use('/*', (req, res) => {
 	res.status(404).send({
 		status: 'FAILED',

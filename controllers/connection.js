@@ -20,7 +20,9 @@ module.exports = {
     
     closeConnection: (client) => {
         try {
-            client.close();
+            if (client) {
+                client.close();
+            }
         } catch (error) {
             console.log("Could Not Close Connection Due to....", error);
         }
